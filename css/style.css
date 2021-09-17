@@ -1,0 +1,350 @@
+:root {
+    --green: #10cab7;
+    --blue: #00E1FF;
+    --grey: #E6E6E6;
+    --bold: #2B3C47;
+    --text: #545B6B;
+}
+
+*, 
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+nav {
+    height: 80px;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%
+}
+
+nav .logo img {
+    width: 40%;
+}
+
+nav .humbergar .bar {
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: 5px;
+    background-color: black;
+}
+
+.section-title {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.section-title .title {
+    color: var(--grey); 
+    font-size: 6.2rem;
+    margin-bottom: -37px;
+}
+
+.hero {
+    width: 98%;
+    height: 460px;
+    margin: auto;
+    text-align: center;
+    background-color: var(--grey);
+    background-image: url('../images/mauntain.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .hero__title {
+    color: var(--green);
+    font-size: 3rem;
+    padding: 50px 0;
+}
+
+.hero .hero__description {
+    color: var(--text);
+    margin-bottom: 15px;
+}
+
+.marketing {
+    display: flex;
+}
+
+.marketing .marketing__box {
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 50px;
+}
+
+.marketing .marketing__box:nth-child(2) {
+    box-shadow: 0 7px 7px -9px var(--text);
+}
+
+.marketing .marketing__icon {
+    width: 70px;
+    margin-bottom: 30px;
+}
+
+.marketing .marketing__title {
+    color: var(--bold);
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.marketing .marketing__description {
+    color: var(--text);
+    line-height: 30px;
+}
+
+.services {
+    margin-bottom: 100px;
+}
+
+.services .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services .services__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    max-width: 550px;
+}
+
+.services .services__grid .services__service {
+    display: flex;
+    justify-content: space-between;
+    width: 290px;
+}
+
+.services .services__icon {
+    height: 50px;
+    padding: 10px;
+}
+
+.services .services__service div {
+    width: 225px;
+}
+
+.services .services__service h3 {
+    text-transform: capitalize;
+    margin-bottom: 20px;
+} 
+
+.services .services__service p {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.services .services__image {
+    width: 167px;
+    height: 207px;
+    background-image: url('../images/mauntain.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+    border: 30px solid;
+    border-right: 20px solid;
+    border-image: linear-gradient(to right, transparent, transparent 70%, 
+                  var(--bold) 70%, var(--bold) 100%) 30;
+}
+
+.portfolio {
+    background-color: hsl(0, 0% , 90%, .3);
+    padding-bottom: 50px;
+}
+
+.portfolio .portfolio__flexbox {
+    display: flex;
+    justify-content: center;
+    grid-gap: 20px;
+}
+
+.portfolio .portfolio__flexbox > * {
+    width: 358px;
+}
+
+.portfolio__flexbox .portfolio__project .portfolio__project-image {
+    width: 100%;
+    height: 255px;
+}
+
+.portfolio__flexbox .portfolio__project .portfolio__project-title {
+    color: var(--bold);
+    margin: 10px 0;
+}
+
+.portfolio__flexbox .portfolio__project .portfolio__project-description {
+    font-size: 12px;
+    color: var(--text);
+}
+
+.portfolio button {
+    font-weight: 600;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    padding: 7px;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.portfolio button a {
+    color: var(--bold);
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .about__image {
+    width: 167px;
+    height: 207px;
+    position: relative;
+    background-image: url('../images/plant.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+    border-style: solid;
+    border-width: 35px 0 35px 8px;
+    border-image: linear-gradient(to right, hsl(0, 0% , 90%, .4), hsl(0, 0% , 90%, .4) 40%,
+                  transparent 40%, transparent 100%) 30;
+}
+
+.about .about__image::before {
+    content: '';
+    width: 60px;
+    height: 180px;
+    background-color: var(--green);
+    position: absolute;
+    top: -18px;
+    right: -28px;
+    z-index: -1;
+}
+
+.about .about__image::after {
+    content: '';
+    width: 50px;
+    height: 36px;
+    background-color: var(--green);
+    position: absolute;
+    right: -78px;
+    bottom: 45px;
+}
+
+.about .about__text {
+    width: 474px;
+}
+
+.about .about__text .about__top-text {
+    color: var(--bold);
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.about .about__text .about__bottom-text {
+    font-size: 11px;
+    padding-top: 10px;
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, var(--green), var(--green) 50%, 
+    transparent 50%, transparent 100%) 30;
+}
+
+.about .about__text .about__bottom-text p {
+    line-height: 23px;
+}
+
+.contact {
+    background-color: hsl(0, 0% , 90%, .3);
+    padding-bottom: 100px;
+}
+
+.contact h2 {
+    color: var(--bold);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contact h3 {
+    position: relative;
+    z-index: 1;
+    color: var(--green);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    margin-left: 25px;
+}
+
+.contact h3::after {
+    content: '';
+    width: 412px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    left: -25px;
+    bottom: -3px;
+    z-index: -1;
+}
+
+.contact .contact__social-media {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    width: 312px;
+    margin-left: 45px;
+    font-size: 12px;
+}
+
+.contact .contact__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 104px;
+    height: 28px;
+}
+
+.contact .contact__icons img {
+    width: 15px;
+}
+
+footer {
+    height: 100px;
+    background-color: var(--bold);
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+footer span {
+    color: var(--green);
+}
+
+
+
