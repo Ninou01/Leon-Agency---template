@@ -62,7 +62,7 @@ nav .humbergar .bar {
     margin: auto;
     text-align: center;
     background-color: var(--grey);
-    background-image: url('../images/mauntain.jpg');
+    background-image: url('../images/mountain.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -76,7 +76,7 @@ nav .humbergar .bar {
 
 .hero .hero__description {
     color: var(--text);
-    margin-bottom: 15px;
+    line-height: 35px;
 }
 
 .marketing {
@@ -155,7 +155,7 @@ nav .humbergar .bar {
 .services .services__image {
     width: 167px;
     height: 207px;
-    background-image: url('../images/mauntain.jpg');
+    background-image: url('../images/mountain.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     box-sizing: content-box;
@@ -344,6 +344,118 @@ footer {
 
 footer span {
     color: var(--green);
+}
+
+/************* tablet design *************/
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .hero {
+        height: 360px;
+    }
+
+    .hero .hero__title {
+        padding: 45px 0 20px;
+    }
+
+    .hero .hero__description {
+        margin-bottom: 0; 
+        line-height: 22px;
+    }
+
+    .marketing .marketing__box {
+        padding: 30px 10px;
+    }
+
+    .services {
+        margin-bottom: 50px;
+    }
+
+    .services .container {
+        flex-direction: column;
+    }
+
+    .services .services__grid {
+        margin-bottom: 40px;
+    }
+
+    .portfolio .portfolio__flexbox > * {
+        width: 230px;
+    }
+
+    .portfolio__flexbox .portfolio__project .portfolio__project-image {
+        height: 200px;
+    }
+    
+    .about .container {
+        flex-direction: column;
+    }
+
+    .about .about__image {
+        margin-bottom: 20px;
+    }
+
+}
+
+/************* mobile design *************/
+
+@media only screen and (max-width: 760px) {
+    .section-title .title {
+        font-size: 5.3rem;
+    }
+
+    .marketing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marketing .marketing__box{
+        width: calc(100% / 1.6);
+        padding: 30px 0px;
+    }
+
+    .marketing .marketing__box:nth-child(2) {
+        box-shadow: none;
+    }
+
+    .marketing .marketing__box:nth-child(3) {
+        box-shadow: 0 7px 7px -9px var(--text);
+    }
+
+    .services .services__grid {
+        grid-template: none;
+        grid-gap: 40px;
+    }
+
+    .portfolio .portfolio__flexbox {
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 50px;
+    }
+
+    .portfolio .portfolio__flexbox > * {
+        width: 300px;
+    }
+
+    .about .about__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    .about .about__text > * {
+        width: 85%;
+    }
+
+    .contact .container {
+        overflow: hidden;
+        word-break: break-word;
+    }
+
 }
 
 
