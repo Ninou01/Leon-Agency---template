@@ -1,0 +1,89 @@
+@import url("base.css");
+
+.services {
+    margin-bottom: 100px;
+}
+
+.services .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services .services__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    max-width: 550px;
+}
+
+.services .services__grid .services__service {
+    display: flex;
+    justify-content: space-between;
+    width: 290px;
+}
+
+.services .services__icon {
+    height: 50px;
+    padding: 10px;
+}
+
+.services .services__service div {
+    width: 225px;
+}
+
+.services .services__service h3 {
+    text-transform: capitalize;
+    margin-bottom: 20px;
+} 
+
+.services .services__service p {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.services .services__image {
+    width: 167px;
+    height: 207px;
+    background-image: url('../images/mountain.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+    border: 30px solid;
+    border-right: 20px solid;
+    border-image: linear-gradient(to right, transparent, transparent 70%, 
+                  var(--bold) 70%, var(--bold) 100%) 30;
+}
+
+/************* tablet design *************/
+
+@media only screen and (max-width: 1024px) {
+
+    .services {
+        margin-bottom: 50px;
+    }
+
+    .services .container {
+        flex-direction: column;
+    }
+
+    .services .services__grid {
+        margin-bottom: 40px;
+    }
+
+}
+
+/************* mobile design *************/
+
+@media only screen and (max-width: 760px) {
+
+    .services .services__grid {
+        grid-template: none;
+        grid-gap: 40px;
+    }
+
+}
+
+
+

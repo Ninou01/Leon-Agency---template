@@ -1,0 +1,64 @@
+@import url("base.css");
+
+.contact {
+    background-color: hsl(0, 0% , 90%, .3);
+    padding-bottom: 100px;
+}
+
+.contact h2 {
+    color: var(--bold);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contact h3 {
+    position: relative;
+    z-index: 1;
+    color: var(--green);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    margin-left: 25px;
+}
+
+.contact h3::after {
+    content: '';
+    width: 412px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    left: -25px;
+    bottom: -3px;
+    z-index: -1;
+}
+
+.contact .contact__social-media {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    width: 312px;
+    margin-left: 45px;
+    font-size: 12px;
+}
+
+.contact .contact__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 104px;
+    height: 28px;
+}
+
+.contact .contact__icons img {
+    width: 15px;
+}
+
+/************* tablet and mobile design *************/
+
+@media only screen and (max-width: 760px) {
+    
+    .contact .container {
+        overflow: hidden;
+        word-break: break-word;
+    }
+
+}

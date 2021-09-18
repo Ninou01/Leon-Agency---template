@@ -1,0 +1,44 @@
+@import url("base.css");
+
+.hero {
+    width: 98%;
+    height: 460px;
+    margin: auto;
+    text-align: center;
+    background-color: var(--grey);
+    background-image: url('../images/mountain.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .hero__title {
+    color: var(--green);
+    font-size: 3rem;
+    padding: 50px 0;
+}
+
+.hero .hero__description {
+    color: var(--text);
+    line-height: 35px;
+}
+
+/************* tablet and mobile design *************/
+
+@media only screen and (max-width: 1024px) {
+    .hero {
+        height: 360px;
+    }
+
+    .hero .hero__title {
+        padding: 45px 0 20px;
+    }
+
+    .hero .hero__description {
+        margin-bottom: 0; 
+        line-height: 22px;
+    }
+
+}
+
+

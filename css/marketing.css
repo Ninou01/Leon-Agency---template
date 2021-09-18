@@ -1,0 +1,63 @@
+@import url('base.css');
+
+.marketing {
+    display: flex;
+}
+
+.marketing .marketing__box {
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 50px;
+}
+
+.marketing .marketing__box:nth-child(2) {
+    box-shadow: 0 7px 7px -9px var(--text);
+}
+
+.marketing .marketing__icon {
+    width: 70px;
+    margin-bottom: 30px;
+}
+
+.marketing .marketing__title {
+    color: var(--bold);
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.marketing .marketing__description {
+    color: var(--text);
+    line-height: 30px;
+}
+
+/************* tablet design *************/
+
+@media only screen and (max-width: 1024px) {
+    .marketing .marketing__box {
+        padding: 30px 10px;
+    }
+
+}
+
+/************* mobile design *************/
+
+@media only screen and (max-width: 760px) {
+    .marketing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marketing .marketing__box{
+        width: calc(100% / 1.6);
+        padding: 30px 0px;
+    }
+
+    .marketing .marketing__box:nth-child(2) {
+        box-shadow: none;
+    }
+
+    .marketing .marketing__box:nth-child(3) {
+        box-shadow: 0 7px 7px -9px var(--text);
+    }
+
+}

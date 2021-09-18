@@ -1,0 +1,98 @@
+@import url("base.css");
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .about__image {
+    width: 167px;
+    height: 207px;
+    position: relative;
+    background-image: url('../images/plant.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+    border-style: solid;
+    border-width: 35px 0 35px 8px;
+    border-image: linear-gradient(to right, hsl(0, 0% , 90%, .4), hsl(0, 0% , 90%, .4) 40%,
+                  transparent 40%, transparent 100%) 30;
+}
+
+.about .about__image::before {
+    content: '';
+    width: 60px;
+    height: 180px;
+    background-color: var(--green);
+    position: absolute;
+    top: -18px;
+    right: -28px;
+    z-index: -1;
+}
+
+.about .about__image::after {
+    content: '';
+    width: 50px;
+    height: 36px;
+    background-color: var(--green);
+    position: absolute;
+    right: -78px;
+    bottom: 45px;
+}
+
+.about .about__text {
+    width: 474px;
+}
+
+.about .about__text .about__top-text {
+    color: var(--bold);
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.about .about__text .about__bottom-text {
+    font-size: 11px;
+    padding-top: 10px;
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, var(--green), var(--green) 50%, 
+    transparent 50%, transparent 100%) 30;
+}
+
+.about .about__text .about__bottom-text p {
+    line-height: 23px;
+}
+
+/************* tablet design *************/
+
+@media only screen and (max-width: 1024px) {
+    
+    .about .container {
+        flex-direction: column;
+    }
+
+    .about .about__image {
+        margin-bottom: 20px;
+    }
+
+}
+
+/************* mobile design *************/
+
+@media only screen and (max-width: 760px) {
+    
+    .about .about__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    .about .about__text > * {
+        width: 85%;
+    }
+
+}
+

@@ -1,0 +1,15 @@
+@import url("base.css");
+
+footer {
+    height: 100px;
+    background-color: var(--bold);
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+footer span {
+    color: var(--green);
+}
