@@ -15,10 +15,24 @@ nav .logo img {
     width: 40%;
 }
 
+nav .humbergar {
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 300ms;
+    -webkit-transition: background-color 300ms;
+    -moz-transition: background-color 300ms;
+    -ms-transition: background-color 300ms;
+    -o-transition: background-color 300ms;
+}
+
+.humbergar:hover {
+    background-color: var(--grey);
+}
+
 nav .humbergar .bar {
     display: block;
     width: 20px;
     height: 3px;
     margin: 5px;
-    background-color: black;
+    background-color: var(--bold);
 }
