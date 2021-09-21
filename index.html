@@ -32,10 +32,20 @@
                 <a href=""><img src="images/logo.png" alt="logo"></a>
             </div>
 
-            <div class="humbergar">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <label for="checking">
+                <div class="humbergar">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </label>
+
+            <input type="checkbox" id="checking">
+            <div class="menu">
+                <a href="#services">services</a>
+                <a href="#portfolio">portfolio</a>
+                <a href="#about">about</a>
+                <a href="#contact">contact</a>
             </div>
         </div>
     </nav>
@@ -73,7 +83,7 @@
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="section-title">
             <h2 class="title">services</h2>
             <p class="description">Don't be busy, be productive</p>
@@ -134,7 +144,7 @@
 
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="section-title">
             <h2 class="title">portfolio</h2>
             <p class="description">If you do it right, it will last forever</p>
@@ -172,7 +182,7 @@
         <button><a href="#">show me more </a></button>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="section-title">
             <h2 class="title">about</h2>
             <p class="description">Less is more work</p>
@@ -203,7 +213,7 @@
 
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="section-title">
             <h2 class="title">contact</h2>
             <p class="description">We are born to create</p>
@@ -228,6 +238,18 @@
             &copy; 2019 - <span>leon</span>,all rights reserved
         </p>
     </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 
 </body>
 

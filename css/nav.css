@@ -25,10 +25,6 @@ nav .humbergar {
     -o-transition: background-color 300ms;
 }
 
-.humbergar:hover {
-    background-color: var(--grey);
-}
-
 nav .humbergar .bar {
     display: block;
     width: 20px;
@@ -36,3 +32,93 @@ nav .humbergar .bar {
     margin: 5px;
     background-color: var(--bold);
 }
+
+label {
+    order: 3;
+}
+
+#checking {
+    display: none;
+}
+
+nav .menu {
+    animation: appear 100ms linear;
+    -webkit-animation: appear 100ms linear;
+}
+
+nav .menu a {
+    color: var(--text);
+}
+
+nav .menu a:not(:last-child) {
+    margin-right: 30px;
+}
+
+#checking:not(:checked) + .menu {
+    animation: desappear 100ms linear  forwards;
+    -webkit-animation: desappear 100ms linear  forwards;
+}
+
+@keyframes desappear {
+    0% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+
+    90% {
+        transform: translateX(14%);
+        -webkit-transform: translateX(14%);
+        -moz-transform: translateX(14%);
+        -ms-transform: translateX(14%);
+        -o-transform: translateX(14%);
+    }
+
+    100% {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes appear {
+    from {
+        transform: translateX(14%);
+        -webkit-transform: translateX(14%);
+        -moz-transform: translateX(14%);
+        -ms-transform: translateX(14%);
+        -o-transform: translateX(14%);
+    }
+
+    to {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    nav {
+        height: 90px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .container .menu {
+        display: flex;
+        justify-content: center;
+        order: 4;
+        width: 100% !important;
+        background: white;
+    }
+}
+
+
+
+
