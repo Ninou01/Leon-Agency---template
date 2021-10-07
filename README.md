@@ -1,4 +1,4 @@
-# Loruki-Website
+# Leon-Agency-template
 
 This website was orginly inspired by [This template](https://bit.ly/3iJ4z0P) and the code part was all writen by me. 
 
